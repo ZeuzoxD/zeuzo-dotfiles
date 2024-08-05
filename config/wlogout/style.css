@@ -1,0 +1,50 @@
+*{
+  font-size: 18px;
+  font-family: "JetBrainsMono Nerd Font";
+  border-radius: 20px;
+}
+
+window {
+ background-color: rgba(0, 0, 0, 0.2);
+}
+
+button {
+  color: #fff;
+  background-color: rgba(0,0,0,0.4);
+  outline-style: none; 
+  border: none;
+  box-shadow: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30%;
+}
+
+button:hover,
+button:focus {
+  color: #fff;
+  background-color: rgba(0,0,0,0.6);
+  background-size: 35%;
+}
+
+#logout {
+   background-image: url("/home/zeuzo/.config/wlogout/icons/logout.png");
+}
+
+#suspend {
+   background-image: url("/home/zeuzo/.config/wlogout/icons/suspend.png");
+}
+
+#shutdown {
+  background-image: url("/home/zeuzo/.config/wlogout/icons/shutdown.png"); 
+}
+
+#reboot {
+   background-image: url("/home/zeuzo/.config/wlogout/icons/reboot.png");
+}
+
+#logout,
+#suspend,
+#shutdown,
+#reboot {
+  margin: 5px;
+}

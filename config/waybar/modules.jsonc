@@ -1,0 +1,168 @@
+{
+  "clock": {
+    "format": "{:%I:%M %A %d}",
+     "tooltip-format": "<tt><big>{calendar}</big></tt>",
+    "calendar": {
+      "mode": "month",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span font-family='CaskaydiaCove Nerd Font' foreground='#33b1ff'><b>{}</b></span>",
+        "days": "<span font-family='CaskaydiaCove Nerd Font' foreground='#f2f4f8'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span font-family='CaskaydiaCove Nerd Font' foreground='#be95ff'><b>{}</b></span>",
+        "today": "<span font-family='CaskaydiaCove Nerd Font' foreground='#f21f66'><b><u>{}</u></b></span>",
+      },
+    },
+  },
+
+  "custom/spotify": {
+    "exec": "~/.config/waybar/scripts/spotify.sh",
+    "max-length": 40,
+    "format": "{}",
+    "on-click": "",
+    "tooltip": false
+  },
+
+  "cpu": {
+    "format": "󰘚  {usage}󱉸",
+  },
+
+  "memory": {
+    "format": "   {:2}󱉸",
+  },
+
+  "disk": {
+    "interval": 600,
+    "format": "󰆼  {percentage_used}󱉸",
+    "path": "/"
+  },
+
+  "hyprland/window": {
+    "format": "󰣇  {title}",
+    "max-length": 80,
+    "separate-outputs": false,
+    "rewrite": {
+      "^.*(Mozilla Firefox)$": "󰈹  Firefox",
+      "^.*v(.*)": "   Neovim",
+      "^.*~$": "󰄛  Kitty",
+      "^.*(Discord | Discord Updater | DiscordUpdater)": "  Discord",
+      "^.*(Spotify Premium)": "   Spotify",
+      "^.*(Anytype)": "Anytype",
+      "^.*(tmux)": "   Tmux",
+      "^.*(Zathura)": "   Zathura",
+      "^.*(Github Desktop)": "  Github",
+      "^.*(overskride)": "󰂯   Overskride",
+      "(.*) ": "   Empty"
+    }
+  },
+ 
+  "group/right": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": true,
+      },    
+    "modules": ["custom/arrow-left","cpu", "memory", "disk"]
+  },
+
+  "custom/arrow-left": {
+    "format": "󰁒 ",
+    "tooltip": false
+  },
+
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "󰤨   {essid}",
+    "format-ethernet": " ", 
+    "format-disconnected": "󰤭 ",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "󰤢  {essid} \n Signal Strength:  {signalStrength}%",
+    "tooltip-format-ethernet": "󰊗   Signal Strength:  {signalStrength}%",
+    "on-click": "",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "interval": 5
+  }, 
+
+"bluetooth": {
+	"format-on": " ",
+	"format-disabled": "󰂲 ",
+  "format-off": "󰂲 ",
+	"format-connected": "󰂱 ",
+	"tooltip-format": false,
+	"on-click": "overskride",
+},
+
+"custom/swaync": {
+	"tooltip": true,
+	"tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
+	"format": "{icon}  {}",
+	"format-icons": {
+		"notification": "<span foreground='#fa3940'><sup></sup></span>",
+		"none": "",
+		"dnd-notification": "<span foreground='#fa3940'><sup></sup></span>",
+		"dnd-none": "",
+		"inhibited-notification": "<span foreground='#fa3940'><sup></sup></span>",
+		"inhibited-none": "",
+		"dnd-inhibited-notification": "<span foreground='#fa3940'><sup></sup></span>",
+		"dnd-inhibited-none": ""
+	},
+	"return-type": "json",
+	"exec-if": "which swaync-client",
+	"exec": "swaync-client -swb",
+	"on-click": "sleep 0.1 && swaync-client -t -sw",
+	"on-click-right": "swaync-client -d -sw",
+	"escape": true,
+},
+// This is only for Arch and Arch Based Distros  depend: pacman-contrib
+  "custom/updates": {
+    "format": "   {}",
+    "tooltip": true,
+    "interval": 43200, // 12 hours
+    "exec": "~/.config/waybar/scripts/check_updates.sh",
+    "return-type": "json",
+  },
+
+  "tray": {
+    "icon-size": 15,
+    "tooltip": false,
+    "spacing": 15   
+  },
+
+
+   "pulseaudio": {
+        "format": "{icon}   {volume}%",
+        "format-bluetooth": "  {volume}%",
+        "format-bluetooth-muted": " ",
+        "format-muted": " ",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": ["", " ", " "]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "battery": {
+      "bat": "BAT0",
+      "adapter": "ADP0",
+      "interval": 60,
+      "states": {
+          "warning": 30,
+          "critical": 15
+      },
+      "max-length": 20,
+      "format": "{icon}   {capacity}%",
+      "format-warning": "{icon} {capacity}%",
+      "format-critical": "{icon} {capacity}%",
+      "format-charging": "<span font-family='Font Awesome 6 Free'></span> {capacity}%",
+      "format-plugged": "  {capacity}%",
+      "format-alt": "{icon} {time}",
+      "format-full": "  {capacity}%",
+      "format-icons": [" ", " ", " ", " ", " "],
+    }
+}

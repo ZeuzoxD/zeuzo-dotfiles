@@ -1,0 +1,29 @@
+{
+  //Basic Config
+  "layer": "top",
+  "position": "top",
+  "mod": "dock",
+  "include": ["~/.config/waybar/modules.jsonc"],
+  "height": 0,
+
+  //Modules Left
+  "modules-left": [
+    "clock",
+    "custom/spotify"
+  ],
+
+  //Modules center
+  "modules-center": [
+    "hyprland/window"
+  ],
+
+  //Modules Right
+  "modules-right": [
+    "group/right",
+    "bluetooth",
+    "tray",
+    "battery",
+    "custom/updates",
+    "custom/swaync"
+  ]
+}

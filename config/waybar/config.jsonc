@@ -19,9 +19,9 @@
 
   //Modules Right
   "modules-right": [
-    "group/right",
-    "bluetooth",
     "tray",
+    "bluetooth",
+    "pulseaudio",
     "battery",
     "custom/updates",
     "custom/swaync"

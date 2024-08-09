@@ -7,11 +7,11 @@
 }
 
 window#waybar {
-  background: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0);
  }
 
 tooltip {
-  background: rgba(22,22,22,0.6);
+  background:  rgba(22,22,22,0.75);
   border-radius: 15px;
   color: #ecd3d8; 
 }
@@ -20,7 +20,7 @@ tooltip {
 #clock {
   background-color: rgba(22,22,22,0.75);
   border-radius: 15px;
-  color: #be95ff;
+  color: rgba(203,166,247,1);
   margin: 8px 4px 8px 10px;
   padding: 0px 8px;
 }
@@ -37,9 +37,34 @@ tooltip {
 #window {
   background-color: rgba(22,22,22,0.75);
   border-radius: 15px;
-  color: #ffab91; 
+  color: #fab387; 
   margin: 8px 0px 8px 0px;
   padding: 10px;
+}
+
+#disk{
+  background: rgba(22,22,22,0.75);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: #f9e2af;
+  margin: 8px 5px 8px 0px;
+  padding: 0px 6px;
+}
+
+#memory {
+  background: rgba(22,22,22,0.75);
+  color: #a6e3a1;
+  margin: 8px 0px;
+  padding: 0px 6px;
+}
+
+#cpu {
+  background: rgba(22,22,22,0.75);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: #f38ba8;
+  margin: 8px 0px;
+  padding: 0px 6px;
 }
 
 #custom-arrow-left {
@@ -53,16 +78,12 @@ tooltip {
 }
 
 #pulseaudio {
-  color: #ff7eb6;
+  color: #f2f4f8;
   background: rgba(22,22,22,0.75);
-  border-radius: 15px;
-  margin: 8px 2px 8px 2px;
+  margin: 6px 0 6px 0;
   padding: 0px 8px
 }
-
 #tray {
-  border-bottom-left-radius: 15px;
-  border-top-left-radius: 15px;
   background-color: rgba(22,22,22,0.75);
   margin: 8px 0px 8px 0px;
   padding: 0px 8px;
@@ -70,35 +91,43 @@ tooltip {
 
 #custom-updates {
   background: rgba(22,22,22,0.75);
-  border-radius: 15px;
   color: #ff5f87;
-  margin: 8px 2px 8px 2px;
+  margin: 8px 0px;
   padding: 0px 8px;
 }
 
-#bluetooth{
-  border-bottom-right-radius: 15px;
-  border-top-right-radius: 15px;
+#network {
   background: rgba(22,22,22,0.75);
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  color: #cba6f7;
+  margin: 8px 0px;
+  padding: 0px 12px;
+}
+
+#bluetooth{
+  background: rgba(22,22,22,0.75);
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
   color: #74c7ec;
-  margin: 8px 5px 8px 0px;
+  margin: 8px 0px 8px 8px;
   padding: 0px 8px;
 }
 
 #custom-swaync {
   background-color: rgba(22,22,22,0.75);
-  border-radius: 15px;
-  color: #faab3c;
-  margin: 8px 10px 8px 2px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #fab387;
+  margin: 8px 10px 8px 0px;
   padding: 0px 8px;
 }
 
 
 #battery {
   background-color: rgba(22,22,22,0.75);
-  border-radius: 15px;
   color: #5fffaf;
-  margin: 8px 2px 8px 2px;
+  margin: 8px 0px 8px 0px;
   padding: 0px 8px; 
 }
 

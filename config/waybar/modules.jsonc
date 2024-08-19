@@ -131,6 +131,7 @@
 
 
    "pulseaudio": {
+        "tooltip": false,
         "format": "{icon} {volume}%",
         "format-bluetooth": "  {volume}%",
         "format-bluetooth-muted": "  ",
@@ -144,7 +145,7 @@
             "car": " ",
             "default": [" ", " ", "  "]
         },
-        "on-click": "pavucontrol"
+        "on-click": "~/.config/waybar/scripts/pavucontrol.sh"
     },
 
     "battery": {

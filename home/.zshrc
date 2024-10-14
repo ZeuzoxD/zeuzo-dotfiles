@@ -70,12 +70,13 @@ export WAYLAND_DISPLAY=wayland-1
 export AUTO_NOTIFY_THRESHOLD=20
 export AUTO_NOTIFY_TITLE="Hey! '%command' has just finished"
 export AUTO_NOTIFY_BODY="It completed in %elapsed seconds"
-
+export PATH=$PATH:/usr/lib/python3.11/bin # For Python
+export PATH="$HOME/.cargo/bin:$PATH" # For Rust
 # -- Aliases --
 alias v="nvim"
 alias gc="git clone"
 alias zshconf="$EDITOR ~/.zshrc && source ~/.zshrc"
-
+alias python="python3"
 # -- FZF --
 fg="#f2f4f8"
 bg="#161616"

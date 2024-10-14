@@ -43,6 +43,7 @@
     "separate-outputs": false,
     "rewrite": {
       "^.*(Mozilla Firefox)$": "󰈹  Firefox",
+      "^.*(Zen Browser)$": "   Zen Browser",
       "^.*v(.*)": "   Neovim",
       "^.*~$": "󰄛  Kitty",
       "^.*(Discord | Discord Updater | DiscordUpdater)": "  Discord",
@@ -96,17 +97,7 @@
 "custom/swaync": {
 	"tooltip": true,
 	"tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
-	"format": "{icon}  {}",
-	"format-icons": {
-		"notification": "<span foreground='#fa3940'><sup></sup></span>",
-		"none": "",
-		"dnd-notification": "<span foreground='#fa3940'><sup></sup></span>",
-		"dnd-none": "",
-		"inhibited-notification": "<span foreground='#fa3940'><sup></sup></span>",
-		"inhibited-none": "",
-		"dnd-inhibited-notification": "<span foreground='#fa3940'><sup></sup></span>",
-		"dnd-inhibited-none": ""
-	},
+	"format": "  {}",
 	"return-type": "json",
 	"exec-if": "which swaync-client",
 	"exec": "swaync-client -swb",

@@ -8,10 +8,10 @@ return {
          formatters_by_ft = {
             -- javascript = { "prettier" },
             -- css = { "prettier" },
-            -- c = { "clang_format" },
-            --json = { "prettier" },
-            --go = { "golines" },
+            c = { "clang_format" },
+            go = { "gofmt", "goimports" },
             lua = { "stylua" },
+            rust = { "rustfmt" },
             python = { "isort", "black" },
          },
          format_on_save = {

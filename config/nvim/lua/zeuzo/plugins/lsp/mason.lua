@@ -27,9 +27,9 @@ return {
       mason_lspconfig.setup({
          -- list of servers for mason to install
          ensure_installed = {
-            --"cssls",
             "lua_ls",
-            --"clangd",
+            "rust-analyzer",
+            "pyright",
             --"gopls"
          },
       })
@@ -40,6 +40,7 @@ return {
             "stylua", -- lua formatter
             "isort", -- python formatter
             "black", -- python formatter
+            "rust-analyzer", -- rust formatter
             --"clang_format", -- c/c++ formatter
             --"golines", -- golang formatter
          },
